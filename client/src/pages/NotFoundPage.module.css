@@ -1,0 +1,41 @@
+.container{
+    height: 100vh;
+    width: 100vw; 
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background-color: rgb(37, 27, 27);
+}
+
+.heding{
+    font-size: 6rem;
+    color:#72db73;
+}
+
+.text{
+    font-size: 2rem;
+    color: rgb(221, 11, 11);
+}
+
+.subtext{
+    font-size: 1rem;
+    color: #4d48d8;
+    max-width: 500px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.link{
+    padding: 10px 20px;
+    background-color: #0ce73f;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.link:hover{
+    background-color:#5ab95b;
+    color: rgb(234, 244, 247);
+}

@@ -1,10 +1,34 @@
-import React from 'react'
-import styles from './RegisterPage.module.css'
+import { useContext } from "react";
+import styles from "./RegisterPage.module.css";
+import { AppContext } from "../context/AppContext";
+import Form from "../components/Form";
 
 export default function RegisterPage() {
+  const { user, setUser } = useContext(AppContext);
   return (
     <div className={styles.container}>
-    RegisterPage
+      <div className={styles.left}>
+        <div className={styles.background}></div>
+        <div className={styles.label}>Discover new things on Superapp</div>
+      </div>
+      <div className={styles.right}>
+        <div classNamw={styles.header}>
+          <h2 className={styles.heding}>Super App</h2>
+          <h3 className={styles.subheading}>Create your new account</h3>
+        </div>
+        <Form />
+        <div className={styles.footer}>
+          <button>SIGN UP </button>
+          <p>
+            By clicking on Sign up. you agree to Superapp {""}
+            <span>Terms and Conditions of Use</span>
+          </p>
+          <p>
+            To learn more about how Superapp collects, uses, shares and protects
+            your personal data please head Superapp <span>Privacy Policy</span>
+          </p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
