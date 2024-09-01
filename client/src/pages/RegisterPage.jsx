@@ -3,8 +3,11 @@ import styles from "./RegisterPage.module.css";
 import { AppContext } from "../context/AppContext";
 import Form from "../components/Form";
 
+
 export default function RegisterPage() {
   const { user, setUser } = useContext(AppContext);
+  
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -12,13 +15,12 @@ export default function RegisterPage() {
         <div className={styles.label}>Discover new things on Superapp</div>
       </div>
       <div className={styles.right}>
-        <div classNamw={styles.header}>
+        <div className={styles.header}>
           <h2 className={styles.heding}>Super App</h2>
           <h3 className={styles.subheading}>Create your new account</h3>
         </div>
-        <Form />
+        <Form user={user} setUser={setUser} />
         <div className={styles.footer}>
-          <button>SIGN UP </button>
           <p>
             By clicking on Sign up. you agree to Superapp {""}
             <span>Terms and Conditions of Use</span>
